@@ -3,6 +3,8 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
+    overscroll-behavior-y:none;
 }
 
 * {
@@ -19,6 +21,9 @@ body {
     background-color: #121212;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+  overflow-y: scroll;
 }
 
 @font-face {
@@ -499,6 +504,7 @@ footer {
     grid-template-areas:
         "left-sidebar main-view right-sidebar"
         "now-playing-bar now-playing-bar now-playing-bar";
+   
 }
 
 .desktop-left-sidebar {
@@ -595,7 +601,7 @@ footer {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    min-height: 0;
+    min-height: 0px;
     flex-direction: column;
     width: 100%;
     -webkit-box-flex: 1;
@@ -604,6 +610,7 @@ footer {
     overflow-x: hidden;
     margin-bottom: 0;
     flex: 1;
+    position: relative;
 }
 
 .nav-body-part-1 {
@@ -625,6 +632,7 @@ footer {
     padding: 0;
     margin: 0;
     vertical-align: baseline;
+    min-height: 72px;
 }
 
 .main-body-create-library-part header {
@@ -739,17 +747,19 @@ footer {
 
 .Playlists-podcasts {
     height: 100%;
-    overscroll-behavior: contain;
+    overscroll-behavior-y: contain;
     overflow: hidden;
     display: flex;
     -webkit-box-align: stretch;
+    align-items: stretch;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-wrap: nowrap;
     position: relative;
     scrollbar-width: none;
     vertical-align: baseline;
-
+    flex-shrink: 1;
+     min-height: 200px;
 }
 
 .Playlists-podcasts-inner {
@@ -771,6 +781,9 @@ footer {
     margin: 0;
     min-width: 0;
     z-index: 0;
+    outline: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .section-parent {
@@ -782,6 +795,7 @@ footer {
     min-height: 100%;
     padding: 0 8px 8px;
     vertical-align: baseline;
+    box-sizing: border-box;
 }
 
 .section-parent section {
@@ -873,9 +887,19 @@ footer {
     max-width: 100%;
     z-index: 6;
     margin-bottom: 0;
+         
+}
+.nav-body-part-2{
+    overflow: hidden;
+    vertical-align: baseline;
+    z-index: 5;
+    /* flex-direction: column;
+    width: 100%;
+    flex: 1;
+    position: relative;
+    -webkit-box-flex: 1; */
 
 }
-
 .sign-up-ad-down footer {
     display: flex;
     -webkit-box-orient: vertical;
