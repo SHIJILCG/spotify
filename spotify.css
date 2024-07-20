@@ -4,8 +4,9 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overscroll-behavior-y:none;
+    background-color: #000;
 }
+
 
 * {
     margin: 0;
@@ -23,7 +24,6 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-  overflow-y: scroll;
 }
 
 @font-face {
@@ -515,7 +515,6 @@ footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     background-color: #000;
-    flex-direction: column;
     min-width: 0;
     width: 420px;
     z-index: 4;
@@ -529,6 +528,7 @@ footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     min-height: 0;
+    box-sizing: border-box;
 }
 
 .nav-header {
@@ -601,7 +601,7 @@ footer {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    min-height: 0px;
+    min-height: 0;
     flex-direction: column;
     width: 100%;
     -webkit-box-flex: 1;
@@ -624,7 +624,6 @@ footer {
     overflow-x: hidden;
     flex: 1;
     min-height: 0;
-    vertical-align: baseline;
 }
 
 .main-body-create-library-part {
@@ -760,6 +759,8 @@ footer {
     vertical-align: baseline;
     flex-shrink: 1;
      min-height: 200px;
+     scroll-behavior: auto;
+     position: relative;
 }
 
 .Playlists-podcasts-inner {
@@ -893,11 +894,7 @@ footer {
     overflow: hidden;
     vertical-align: baseline;
     z-index: 5;
-    /* flex-direction: column;
-    width: 100%;
-    flex: 1;
-    position: relative;
-    -webkit-box-flex: 1; */
+    
 
 }
 .sign-up-ad-down footer {
